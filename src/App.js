@@ -1,21 +1,12 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
-import Login from './screens/login';
-import ChooseAction from './screens/admin/ChooseAction';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 function App() {
+  const navigate = useNavigate();
+  useEffect(() => {
+      navigate('/login');
+  },[])
   return (
-    <Router>
-        <Routes>
-          <Route path='/login' element = {<Login/>}>
-          </Route>
-          <Route paht='/' element = {<ChooseAction/>}>
-          </Route>
-        </Routes>
-    </Router>
+      <></>
 
   );
 }
