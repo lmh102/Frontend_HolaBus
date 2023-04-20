@@ -13,7 +13,7 @@ export default function Header() {
         <Link to={"MyRequest"} className="nav-link">My Requests</Link>
         </li>
         <li class="nav-item dropdown">
-        <Link class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <Link class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
           Request Bus
         </Link>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -22,7 +22,7 @@ export default function Header() {
         </div>
       </li>
         <li class="nav-item dropdown">
-        <Link class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <Link class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
           List
         </Link>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -34,7 +34,7 @@ export default function Header() {
         <Link to={"questionAbout"} className="nav-link"> <QuestionCircleIcon/> </Link>
       </li>
       <li class="nav-item dropdown">
-        <Link class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <Link class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
           <PersonCircleIcon/>
         </Link>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
