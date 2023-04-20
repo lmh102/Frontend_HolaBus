@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Login from "./screens/login";
+import LoginForm from "./screens/login/index";
 import Home from "./screens/Home";
 import ChooseAction from "./screens/user/ChooseAction";
 import ListShuttleBus from "./screens/user/ListShuttleBus";
@@ -19,7 +19,7 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-          <Route path='/login' element = {<Login/>}>
+          <Route path='/login' element = {<LoginForm/>}>
           </Route>
           <Route path='/' element = {<Home/>}>
               <Route path="ListShuttleBus" element= {<ListShuttleBus/>}></Route>
