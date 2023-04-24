@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:600|Work+Sans:400,500,600,700&display=swap');
 
-.container{
+#loginBody{
   
   width: 100vw;
   height: 100vh;
@@ -12,10 +12,11 @@
   min-width: 300px;
   max-height: 700px;
   width: 30%;
-  height: 60%;
-  margin: 100px auto;
+  height: 80%;
+  margin: auto;
   background-color: #FFFFFF;
   border-radius: 25px;
+  /* box-shadow: 1px 1px; */
 }
 
 #headerTitle{
@@ -90,26 +91,7 @@
   padding-bottom: 1.5rem;
 }
 
-#facebookIcon{
-  background-image:      url("https://image.flaticon.com/icons/svg/145/145802.svg");
-  background-repeat: no-repeat;
-  width: 3rem;
-  height: 3rem;
-}
 
-#twitterIcon{
-  background-image: url("https://image.flaticon.com/icons/svg/145/145812.svg");
-  background-repeat: no-repeat;
-  width: 3rem;
-  height: 3rem;
-}
-
-#googleIcon{
-  background-image: url("https://image.flaticon.com/icons/svg/145/145804.svg");
-  background-repeat: no-repeat;
-  width: 3rem;
-  height: 3rem;
-}
 
 #iconGroup{
   display: flex;
@@ -123,8 +105,32 @@
 
 #alternativeLogin {
    text-align: center;
-   padding-top: 2rem;
-   margin-top: 1.5rem;
+   padding-top: 1rem;
+   /* margin-top: 1rem; */
 }
 
+#login-google {
+  width: 76%;
+  height: 40px;
+  margin-left: 10%;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+  background-color: rgb(225, 221, 221);
+  box-shadow: 0px 0px 3px;
+  margin-top: 1em;
+}
+
+#login-google img {
+  width: 30px;
+  height: 30px;
+}
+
+#login-google #btn-title{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 15px;
+}
 
