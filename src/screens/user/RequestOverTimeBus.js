@@ -119,7 +119,7 @@ export default function RequestOverTimeBus() {
         <div className="col-md-8 box-card bg-light">
           <form onSubmit={handleSubmit}>
             <div className="text-center text-light bg-warning pt-3 pb-3 fs-4">
-              Book Route Bus
+              Book Overtime Bus
             </div>
             <div className='text-danger text-center'>{message}</div>
 
@@ -161,7 +161,7 @@ const Selection = props => (
       <label className='mx-4'>{props.label}</label>
     </div>
     <div className='col-md-8 px-4'>
-      <select name={props.name} className='form-control' onChange={props.onChange}>
+      <select name={props.name} className='form-select' onChange={props.onChange}>
         <option value='-1'>{props.optionDefault}</option>
         {
           props.option.map((e) => {
