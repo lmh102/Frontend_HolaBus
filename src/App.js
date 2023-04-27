@@ -22,8 +22,8 @@ function App() {
           <Route path='/login' element = {<LoginForm/>}>
           </Route>
           <Route path='/' element = {<Home/>}>
+              <Route index element= {<ChooseAction/>}></Route>
               <Route path="ListShuttleBus" element= {<ListShuttleBus/>}></Route>
-              <Route path="ChooseAction" element= {<ChooseAction/>}></Route>
               <Route path="ListRouteBus" element= {<ListRouteBus/>}></Route>
               <Route path="MyProfile" element= {<MyProfile/>}></Route>
               <Route path="MyRequest" element= {<MyRequest/>}></Route>
