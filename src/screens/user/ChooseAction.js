@@ -12,7 +12,7 @@ export default function ChooseAction() {
     <>
     <div class='container-fluid'>
       <div class='row text-center' style={{margin : "0",width : "100vw", height : "20vh",justifyContent:'center'}}>
-            <h3 style={{fontWeight : "bold"}}>QUICK ACCESS</h3>
+            <h3 style={{fontWeight : "bold"}}><strong style={{color:"#ff7921"}}>QUICK ACCESS</strong></h3>
       </div>
       <div class='col-12 d-flex' style={{ margin : "0",height : "66vh",justifyContent:"space-between"}}>
           <Link to={"/RequestRouteBus"} class='col'>
