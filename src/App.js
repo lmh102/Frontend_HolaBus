@@ -14,6 +14,8 @@ import MyRequest from "./screens/user/MyRequest";
 import RequestRouteBus from "./screens/user/RequestRouteBus";
 import RequestOverTimeBus from "./screens/user/RequestOverTimeBus";
 import NotFound from './screens/NotFound';
+import ListBusSecretary from './screens/user/ListBusSecretary';
+import BusStation from './screens/user/BusStation';
 function App() {
  
   return (
@@ -29,6 +31,9 @@ function App() {
               <Route path="MyRequest" element= {<MyRequest/>}></Route>
               <Route path="RequestRouteBus" element= {<RequestRouteBus/>}></Route>
               <Route path="RequestOverTimeBus" element= {<RequestOverTimeBus/>}></Route>
+              <Route path="ListBusSecretary" element= {<ListBusSecretary/>}></Route>
+              <Route path="BusStation" element= {<BusStation/>}></Route>
+
           </Route>
           <Route path='*' element = {<NotFound/>}/>
     </Routes>

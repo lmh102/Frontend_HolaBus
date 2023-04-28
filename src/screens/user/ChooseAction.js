@@ -21,10 +21,10 @@ export default function ChooseAction() {
           <Link to={"/RequestOverTimeBus"} class='col-md-2'>
               <ActionItem src={ImageBookOverTimeBus} ActionName={"Book Overtime Bus"}/>
           </Link>
-          <Link class='col-md-2'>
+          <Link to={"/BusStation"} class='col-md-2'>
               <ActionItem src={BusStation} ActionName={"Bus Station"}/>
           </Link>
-          <Link class='col-md-2'>
+          <Link to={"ListBusSecretary"}class='col-md-2'>
               <ActionItem src={ListBusSecretary} ActionName={"List Bus Secretary"}/>
           </Link>
           <Link to={"/ListShuttleBus"} class='col-md-2'>
