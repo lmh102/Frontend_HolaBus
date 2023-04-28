@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from '@atlaskit/image';
-import styled, { css } from 'styled-components';
+import  { css } from 'styled-components';
 import  "./css/actionitem.css"
 export default function ActionItem({src,ActionName}) {
     const containerStyles = css({

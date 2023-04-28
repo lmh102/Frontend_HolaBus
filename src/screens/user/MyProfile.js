@@ -6,7 +6,7 @@ export default function MyProfile() {
     <div className="col-md-12 d-flex justify-content-center">
       <div className="col-md-8 box-card bg-light">
         <form >
-          <div className="text-center text-light bg-warning pt-3 pb-3 fs-4">
+          <div className="text-center text-light pt-3 pb-3 fs-4" style={{backgroundColor:"#ff7921"}}>
             USER INFORMATION 
           </div>
           <div className='text-danger text-center'>{}</div>

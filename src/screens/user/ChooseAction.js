@@ -15,22 +15,22 @@ export default function ChooseAction() {
             <h3 style={{fontWeight : "bold"}}><strong style={{color:"#ff7921"}}>QUICK ACCESS</strong></h3>
       </div>
       <div class='col-12 d-flex' style={{ margin : "0",height : "66vh",justifyContent:"space-between"}}>
-          <Link to={"/RequestRouteBus"} class='col'>
+          <Link to={"/RequestRouteBus"} class='col-md-2'>
               <ActionItem src={imgBookRouteBus} ActionName={"Book Route Bus"}/>
           </Link>
-          <Link to={"/RequestOverTimeBus"} class='col'>
+          <Link to={"/RequestOverTimeBus"} class='col-md-2'>
               <ActionItem src={ImageBookOverTimeBus} ActionName={"Book Overtime Bus"}/>
           </Link>
-          <Link class='col'>
+          <Link class='col-md-2'>
               <ActionItem src={BusStation} ActionName={"Bus Station"}/>
           </Link>
-          <Link class='col'>
+          <Link class='col-md-2'>
               <ActionItem src={ListBusSecretary} ActionName={"List Bus Secretary"}/>
           </Link>
-          <Link to={"/ListShuttleBus"} class='col'>
+          <Link to={"/ListShuttleBus"} class='col-md-2'>
               <ActionItem src={ListShutleBus} ActionName={"List Shuttle Bus"}/>
           </Link>
-          <Link to={"/ListRouteBus"} class='col'>
+          <Link to={"/ListRouteBus"} class='col-md-2'>
               <ActionItem src={ListRouteBus} ActionName={"List Route Bus"}/>
           </Link>
       </div>

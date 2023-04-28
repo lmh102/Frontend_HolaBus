@@ -118,7 +118,7 @@ export default function RequestOverTimeBus() {
       <div className="col-md-12 d-flex justify-content-center">
         <div className="col-md-8 box-card bg-light">
           <form onSubmit={handleSubmit}>
-            <div className="text-center text-light bg-warning pt-3 pb-3 fs-4">
+            <div className="text-center text-light pt-3 pb-3 fs-4" style={{backgroundColor:"#ff7921"}}>
               Book Route Bus
             </div>
             <div className='text-danger text-center'>{message}</div>
@@ -146,7 +146,7 @@ export default function RequestOverTimeBus() {
             </div>
 
             <div className='justify-content-end px-4 d-flex mt-4 mb-4'>
-              <input type='submit' value='Register' className='btn btn-warning' id='register' />
+              <input type='submit' value='Register' className='btn' id='register' style={{backgroundColor:"#ff7921"}} />
             </div>
           </form>
         </div>

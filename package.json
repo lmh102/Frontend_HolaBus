@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@atlaskit/dynamic-table": "^14.8.16",
     "@atlaskit/icon": "^21.11.5",
     "@atlaskit/image": "^1.0.4",
     "@atlaskit/tabs": "^13.3.13",
@@ -13,7 +14,9 @@
     "jquery": "^3.6.4",
     "popper.js": "^1.16.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
     "react-router-dom": "^6.10.0",
     "react-scripts": "^5.0.1",
     "styled-components": "^5.3.10",
