@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import { withGoogleMap, withScriptjs, GoogleMap, Marker } from "react-google-maps"
+import GoogleMapApp from '../../components/GoogleMap';
 
 function BusRouteInformation(props) {
   const [show, setShow] = useState(false);
@@ -72,20 +72,9 @@ function BusRouteInformation(props) {
           <div className='mt-3'>
             <div className='text-primary mx-3 text-start'>If you can not see the map, please presse Ctr+F5</div>
           </div>
-          {/* <div>
-            <GoogleMap
-              defaultZoom={15}
-              defaultCenter={{ lat: 21.027763, lng: 105.834160 }}
-            >
-              <Marker
-                icon={{
-                  url: 'https://insulationpads.co.uk/wp-content/uploads/2017/10/Home.png',
-                  scaledSize: new window.google.maps.Size(40, 40),
-                }}
-                position={{ lat: 21.027763, lng: 105.834160 }}
-              />
-            </GoogleMap>
-          </div> */}
+          <div className='col-md-12'>
+          <GoogleMapApp addressPoint={props.BusRoute}/>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

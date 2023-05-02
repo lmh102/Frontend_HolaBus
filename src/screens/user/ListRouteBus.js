@@ -100,11 +100,11 @@ export default function ListRouteBus() {
                 <tbody>
                     {
                         listRouteBus.map((e) => {
-                            return <tr>
+                            return <tr key={e.ID}>
                             <td>{e.RouteGroup}</td>
                             <td>
                                 {/* <div className='text-primary' style={{cursor: "pointer"}}>{e.BusRoute}</div> */}
-                                <BusRouteInformation BusRoute={e.BusRoute} BusType={e.BusType} RouteGroup={e.RouteGroup} PickupLocation={e.PickupLocation} StartTime={e.StartTime} Destination={e.Destination} DestinationTime={e.DestinationTime}/>
+                                <BusRouteInformation key={e.ID} BusRoute={e.BusRoute} BusType={e.BusType} RouteGroup={e.RouteGroup} PickupLocation={e.PickupLocation} StartTime={e.StartTime} Destination={e.Destination} DestinationTime={e.DestinationTime}/>
                             </td>
                             <td>{e.BusName.toString()}</td>
                             <td>
