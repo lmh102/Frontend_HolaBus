@@ -2,15 +2,10 @@ import React from 'react';
 
 export default function MyProfile() {
   return (
-<<<<<<< Updated upstream
-    <div className="container mt-5 mb-5" style={{height:"56.67vh"}}>
-    <div className="col-md-12 d-flex justify-content-center">
-      <div className="col-md-8 box-card bg-light">
-=======
+
     <div className="container mt-5 mb-5" style={{height:"56.75vh"}}>
     <div className="col-md-12 d-flex justify-content-center" >
       <div className="col-md-8 box-card bg-light" >
->>>>>>> Stashed changes
         <form >
           <div  className="text-center text-light pt-3 pb-3 fs-4" style={{backgroundColor:"#ff7921"}}>
             USER INFORMATION 
