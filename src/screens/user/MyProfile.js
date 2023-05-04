@@ -2,11 +2,17 @@ import React from 'react';
 
 export default function MyProfile() {
   return (
+<<<<<<< Updated upstream
     <div className="container mt-5 mb-5" style={{height:"56.67vh"}}>
     <div className="col-md-12 d-flex justify-content-center">
       <div className="col-md-8 box-card bg-light">
+=======
+    <div className="container mt-5 mb-5" style={{height:"56.75vh"}}>
+    <div className="col-md-12 d-flex justify-content-center" >
+      <div className="col-md-8 box-card bg-light" >
+>>>>>>> Stashed changes
         <form >
-          <div className="text-center text-light pt-3 pb-3 fs-4" style={{backgroundColor:"#ff7921"}}>
+          <div  className="text-center text-light pt-3 pb-3 fs-4" style={{backgroundColor:"#ff7921"}}>
             USER INFORMATION 
           </div>
           <div className='text-danger text-center'>{}</div>
@@ -24,13 +30,13 @@ export default function MyProfile() {
             <ViewInfo label='Phone number' name='' value='' />
             <ViewInfo label='Department' name='' value='' />
 
-               </div>
+               </div >
 
-          <div className='justify-content-end px-4 d-flex mt-4 mb-4'>
+          <div className='justify-content-end px-4 d-flex mt-4 mb-4' >
           </div>
-        </form>
+        </form > 
       </div>
-    </div>
+    </div>     
   </div>
 )
 
