@@ -249,20 +249,15 @@ const Selection = (props) => (
     <div className="col-md-4">
       <label className="mx-4">{props.label}</label>
     </div>
-    <div className="col-md-8 px-4">
-      <select
-        name={props.name}
-        className="form-control"
-        onChange={props.onChange}
-      >
-        <option value="-1">{props.optionDefault}</option>
-        {props.option.map((e) => {
-          return (
-            <option key={e.id} value={e.id}>
-              {e.title}
-            </option>
-          );
-        })}
+    <div className='col-md-8 px-4'>
+      <select name={props.name} className='form-select' onChange={props.onChange}>
+        <option value='-1'>{props.optionDefault}</option>
+        {
+          props.option.map((e) => {
+            return <option key={e.id} value={e.id}>{e.title}</option>
+          })
+        }
+
       </select>
     </div>
   </div>

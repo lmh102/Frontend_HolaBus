@@ -1,0 +1,14 @@
+{
+    "BusRoute": [
+        {
+            "ID": 1,
+            "Route": "Công viên Hòa Bình (Bắc Từ Liêm)",
+            "Type": "ROUTE_BUS",
+            "GROUP": "Tuyến 1",
+            "PickupLocation": "Công viên Hòa Bình",
+            "PickupTime": "07:40",
+            "Destination": "Fville 1/Fville 2 - Hoà Lạc",
+            "DestinationTime": "8h30"
+        }
+    ]
+}

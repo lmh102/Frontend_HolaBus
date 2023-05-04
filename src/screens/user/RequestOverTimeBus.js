@@ -161,7 +161,7 @@ const Selection = props => (
       <label className='mx-4'>{props.label}</label>
     </div>
     <div className='col-md-8 px-4'>
-      <select name={props.name} className='form-control' onChange={props.onChange}>
+      <select name={props.name} className='form-select' onChange={props.onChange}>
         <option value='-1'>{props.optionDefault}</option>
         {
           props.option.map((e) => {

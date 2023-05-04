@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function MyProfile() {
   return (
-    <div className="container mt-5 mb-5">
+    <div className="container mt-5 mb-5" style={{height:"56.67vh"}}>
     <div className="col-md-12 d-flex justify-content-center">
       <div className="col-md-8 box-card bg-light">
         <form >
