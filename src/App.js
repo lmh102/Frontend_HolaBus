@@ -20,6 +20,9 @@ import RequestManagement from './screens/admin/RequestManagement';
 import UserManagement from './screens/admin/UserManagement';
 import BusRouteManagement from './screens/admin/BusRouteManagement';
 import AllRequest from './screens/admin/ListAllRequest';
+import HomeAdmin from './screens/HomeAdmin';
+import AdminProfile from './screens/admin/AdminProfile';
+import AdminChooseAction from './screens/admin/AdminChooseAction';
 
 function App() {
  
@@ -38,10 +41,14 @@ function App() {
               <Route path="RequestOverTimeBus" element= {<RequestOverTimeBus/>}></Route>
               <Route path="ListBusSecretary" element= {<ListBusSecretary/>}></Route>
               <Route path="BusStation" element= {<BusStation/>}></Route>
+          </Route>
+          <Route path='/admin' element={<HomeAdmin/>}>
+              <Route index element= {<AdminChooseAction/>}></Route>
               <Route path="RequestManagement" element= {<RequestManagement/>}></Route>
               <Route path="UserManagement" element= {<UserManagement/>}></Route>
               <Route path="BusRouteManagement" element= {<BusRouteManagement/>}></Route>
               <Route path="AllRequest" element= {<AllRequest/>}></Route>
+              <Route path="Profile" element= {<AdminProfile/>}></Route>
           </Route> 
           <Route path='*' element = {<NotFound/>}/>
     </Routes>
