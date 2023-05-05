@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import { IconContext } from 'react-icons';
+import React, { useState } from "react";
 import * as Icon from "react-icons/fa";
-import BusRouteInformation from './BusRouteInformation';
+import BusRouteInformation from "../user/BusRouteInformation";
 
-export default function ListRouteBus() {
+export default function BusRouteManagement() {
+
     const [listRouteBus, setListRouteBus] = useState(
         [
             {
@@ -65,11 +65,6 @@ export default function ListRouteBus() {
         ]
     );
 
-    const openModal = (e) => {
-        <BusRouteInformation />
-    }
-    // var group = "";
-
     return (
         <div className="container-fluid m-0 p-0">
             <div className="col-md-12 d-flex justify-content-center">
@@ -81,52 +76,55 @@ export default function ListRouteBus() {
             <div className='mx-4'>
                 <div className='d-flex justify-content-end mt-3 mb-3'>
                     <form>
+                        <button className='btn btn-outline-success d-flex text-center mx-3'> <div><Icon.FaFileUpload /></div><div className='mx-2'>Import</div></button>
+                    </form>
+                    <form>
                         <button className='btn btn-outline-dark d-flex text-center'> <div><Icon.FaFileExcel /></div><div className='mx-2'>Export</div></button>
                     </form>
                 </div>
                 <table className='table table-bordered'>
-                <thead>
-                    <tr className='bg-warning'>
-                        <th>Route Group</th>
-                        <th>Bus Route</th>
-                        <th>Bus Name</th>
-                        <th>Route Detail</th>
-                        <th>Return time</th>
-                        <th>Pickup Location</th>
-                        <th>Parking address</th>
-                        <th>Parking Fee</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        listRouteBus.map((e) => {
-                            return <tr key={e.ID}>
-                            <td>{e.RouteGroup}</td>
-                            <td>
-                                {/* <div className='text-primary' style={{cursor: "pointer"}}>{e.BusRoute}</div> */}
-                                <BusRouteInformation key={e.ID} BusRoute={e.BusRoute} BusType={e.BusType} RouteGroup={e.RouteGroup} PickupLocation={e.PickupLocation} StartTime={e.StartTime} Destination={e.Destination} DestinationTime={e.DestinationTime}/>
-                            </td>
-                            <td>{e.BusName.toString()}</td>
-                            <td>
-                                <div className='d-flex'>
-                                    <div className='fw-bold text-danger'>{e.StartTime}</div>
-                                    <div>{e.PickupLocation}</div>
-                                </div>
-                            </td>
-                            <td>{e.ReturnTime}</td>
-                            <td>
-                            <div className='d-flex'>
-                                    <div className='fw-bold text-danger'>{e.StartTime}</div>
-                                    <div>{e.PickupLocation}</div>
-                                </div>
-                            </td>
-                            <td>{e.ParkingAddress}</td>
-                            <td>{e.ParkingFee}</td>
+                    <thead>
+                        <tr className='bg-warning'>
+                            <th>Route Group</th>
+                            <th>Bus Route</th>
+                            <th>Bus Name</th>
+                            <th>Route Detail</th>
+                            <th>Return time</th>
+                            <th>Pickup Location</th>
+                            <th>Parking address</th>
+                            <th>Parking Fee</th>
                         </tr>
-                        })
-                    }
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {
+                            listRouteBus.map((e) => {
+                                return <tr key={e.ID}>
+                                    <td>{e.RouteGroup}</td>
+                                    <td>
+                                        {/* <div className='text-primary' style={{cursor: "pointer"}}>{e.BusRoute}</div> */}
+                                        <BusRouteInformation key={e.ID} BusRoute={e.BusRoute} BusType={e.BusType} RouteGroup={e.RouteGroup} PickupLocation={e.PickupLocation} StartTime={e.StartTime} Destination={e.Destination} DestinationTime={e.DestinationTime} />
+                                    </td>
+                                    <td>{e.BusName.toString()}</td>
+                                    <td>
+                                        <div className='d-flex'>
+                                            <div className='fw-bold text-danger'>{e.StartTime}</div>
+                                            <div>{e.PickupLocation}</div>
+                                        </div>
+                                    </td>
+                                    <td>{e.ReturnTime}</td>
+                                    <td>
+                                        <div className='d-flex'>
+                                            <div className='fw-bold text-danger'>{e.StartTime}</div>
+                                            <div>{e.PickupLocation}</div>
+                                        </div>
+                                    </td>
+                                    <td>{e.ParkingAddress}</td>
+                                    <td>{e.ParkingFee}</td>
+                                </tr>
+                            })
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
     )

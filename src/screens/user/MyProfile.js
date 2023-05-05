@@ -1,6 +1,10 @@
-import React from 'react';
+import React , { useState } from 'react';
 
 export default function MyProfile() {
+  const [name,setName] =useState('');
+  const [email,setMail] =useState('');
+  const [phone,setPhone] =useState('');
+  const [depart,setDepartment] =useState('');
   return (
     <div className="container mt-5 mb-5" style={{height:"56.67vh"}}>
     <div className="col-md-12 d-flex justify-content-center">
@@ -19,10 +23,10 @@ export default function MyProfile() {
           <div id='main-content'>
             
 
-            <ViewInfo label='Full name' name='' value='' />
-            <ViewInfo label='Email' name='' value='' />
-            <ViewInfo label='Phone number' name='' value='' />
-            <ViewInfo label='Department' name='' value='' />
+            <ViewInfo label='Full name' name='' value={setName} />
+            <ViewInfo label='Email' name='' value={setMail} />
+            <ViewInfo label='Phone number' name='' value={setPhone} />
+            <ViewInfo label='Department' name='' value={setDepartment} />
 
                </div>
 

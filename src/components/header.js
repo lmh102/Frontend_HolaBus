@@ -14,7 +14,7 @@ export default function Header() {
     <>
       <ul className="nav nav-tabs" style={{borderBottomColor : '#f78700',alignItems:"center"}}>
         <li className="nav-item col-lg-8" >
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/FPT_Software_logo.svg/1200px-FPT_Software_logo.svg.png" alt="FPT software Logo" class = "img-rounded" style={{width : 140}}/>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/FPT_Software_logo.svg/1200px-FPT_Software_logo.svg.png" alt="FPT software Logo" className = "img-rounded" style={{width : 140}}/>
         </li>
         <li className="nav-item" style={styleNavItem}>
         <Link to={"MyRequest"} className="nav-link"><strong style={{color:"#7f7e79"}}>My Requests</strong></Link>

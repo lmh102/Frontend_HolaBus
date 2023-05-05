@@ -17,6 +17,10 @@ export default function RequestOverTimeBus() {
     const todayDate = new Date();
     const dd = todayDate.getDate();
     const mm = todayDate.getMonth() + 1;
+    var DD = "";
+    if(dd < 10) {
+      DD = "0" + dd;
+    }
     var MM = "";
     if (mm < 10) {
       MM = "0" + mm;
@@ -25,10 +29,11 @@ export default function RequestOverTimeBus() {
       MM = mm + "";
     }
     const yy = todayDate.getFullYear();
-
-    return (yy + "-" + MM + "-" + dd);
+    console.log(yy + "-" + MM + "-" + DD);
+    return (yy + "-" + MM + "-" + DD);
   }
 
+  
   // building location
   const [building, setBuilding] = useState(
     [

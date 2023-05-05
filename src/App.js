@@ -16,6 +16,11 @@ import RequestOverTimeBus from "./screens/user/RequestOverTimeBus";
 import NotFound from './screens/NotFound';
 import ListBusSecretary from './screens/user/ListBusSecretary';
 import BusStation from './screens/user/BusStation';
+import RequestManagement from './screens/admin/RequestManagement';
+import UserManagement from './screens/admin/UserManagement';
+import BusRouteManagement from './screens/admin/BusRouteManagement';
+import AllRequest from './screens/admin/ListAllRequest';
+
 function App() {
  
   return (
@@ -33,8 +38,11 @@ function App() {
               <Route path="RequestOverTimeBus" element= {<RequestOverTimeBus/>}></Route>
               <Route path="ListBusSecretary" element= {<ListBusSecretary/>}></Route>
               <Route path="BusStation" element= {<BusStation/>}></Route>
-
-          </Route>
+              <Route path="RequestManagement" element= {<RequestManagement/>}></Route>
+              <Route path="UserManagement" element= {<UserManagement/>}></Route>
+              <Route path="BusRouteManagement" element= {<BusRouteManagement/>}></Route>
+              <Route path="AllRequest" element= {<AllRequest/>}></Route>
+          </Route> 
           <Route path='*' element = {<NotFound/>}/>
     </Routes>
   </BrowserRouter>
