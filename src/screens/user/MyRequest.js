@@ -17,6 +17,20 @@ export default function MyRequest() {
         Endate: "30/06/2023",
         RequestStatus: "Approved",
         Status: "active"
+      },
+      {
+        ID: 2,
+        BusRoute: "Làng Việt Kiều (Hà Đông)",
+        Created: "10/01/2023",
+        Requester: "",
+        Project: "",
+        PickupLocation: "Điện máy Trần Anh - BigC Hà Đông",
+        StartTime: "07h37",
+        BusNumber: "5.2 - Tuyến 5 xe 2", 
+        StartDate: "11/01/2023",
+        Endate: "30/06/2023",
+        RequestStatus: "In Progress",
+        Status: "active"
       }
     ]
   )
@@ -47,10 +61,7 @@ export default function MyRequest() {
     setStartDate(e.target.value);
   }
 
-  const [count, setCount] = useState(1);
-  const handleCount = (e) => {
-    setCount(e);
-  }
+  var count = 1;
   return (
     <div className='container-fluid bg-light'>
       <div className=''>
@@ -111,8 +122,8 @@ export default function MyRequest() {
               </div>
             </tr>
               {
-                listRequest.map((e) => { // chưa sử lý cái count 
-                  return <tr key={e.ID} className='bg-info'>
+                listRequest.map((e) => { 
+                  return <tr key={count++} className='bg-info'>
                     <td>{count}</td>
                     <td>{e.BusRoute}</td>
                     <td>{e.Created}</td>
