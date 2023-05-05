@@ -19,6 +19,8 @@ import BusStation from './screens/user/BusStation';
 import RequestManagement from './screens/admin/RequestManagement';
 import UserManagement from './screens/admin/UserManagement';
 import BusRouteManagement from './screens/admin/BusRouteManagement';
+import AllRequest from './screens/admin/ListAllRequest';
+
 function App() {
  
   return (
@@ -39,6 +41,7 @@ function App() {
               <Route path="RequestManagement" element= {<RequestManagement/>}></Route>
               <Route path="UserManagement" element= {<UserManagement/>}></Route>
               <Route path="BusRouteManagement" element= {<BusRouteManagement/>}></Route>
+              <Route path="AllRequest" element= {<AllRequest/>}></Route>
           </Route> 
           <Route path='*' element = {<NotFound/>}/>
     </Routes>

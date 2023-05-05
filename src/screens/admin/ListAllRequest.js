@@ -1,15 +1,14 @@
-
 import React, {useState} from 'react';
 import * as Icon from "react-icons/fa";
 
-export default function MyRequest() {
+export default function AllRequest() {
   const [listRequest, setListRequest] = useState(
     [
       {
         ID: 1,
         BusRoute: "Làng Việt Kiều (Hà Đông)",
         Created: "10/01/2023",
-        Requester: "",
+        Requester: "Giang Seo Ao",
         Project: "",
         PickupLocation: "Điện máy Trần Anh - BigC Hà Đông",
         StartTime: "07h37",
@@ -23,7 +22,7 @@ export default function MyRequest() {
         ID: 2,
         BusRoute: "Làng Việt Kiều (Hà Đông)",
         Created: "10/01/2023",
-        Requester: "",
+        Requester: "Ha Manh Dat",
         Project: "",
         PickupLocation: "Điện máy Trần Anh - BigC Hà Đông",
         StartTime: "07h37",
@@ -64,7 +63,6 @@ export default function MyRequest() {
 
   var count = 1;
   return (
-
     <div className='container-fluid bg-light'>
       <div className=''>
         <div className='fw-bold mt-1 mb-2'>My Request</div>
@@ -160,5 +158,5 @@ export default function MyRequest() {
       </div>
 
     </div>
-  );
+  )
 }
