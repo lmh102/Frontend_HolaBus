@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import "../css/RequestRouteBus.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function RequestRouteBus() {
   const [message, setMessage] = useState('');
@@ -111,6 +113,9 @@ export default function RequestRouteBus() {
       e.preventDefault();
     }
   }
+
+  const notify = () => toast("You are registered success!");
+
   return (
     <div className="container mt-5 mb-5">
       <div className="col-md-12 d-flex justify-content-center">
@@ -163,7 +168,7 @@ export default function RequestRouteBus() {
             </div>
 
             <div className='justify-content-end px-4 d-flex mt-4 mb-4'>
-              <input type='submit' value='Register' className='btn' id='register' style={{backgroundColor:"#ff7921"}} />
+              <input type='submit' value='Register' className='btn' id='register' style={{backgroundColor:"#ff7921"}}/>
               <a value='Exit' className='btn btn-warning d-none' id='exit' href='/'>Exit</a>
             </div>
           </form>
