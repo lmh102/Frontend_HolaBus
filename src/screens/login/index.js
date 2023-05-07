@@ -1,5 +1,6 @@
-import React, {Component, useState} from "react";
+import React, { Component, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 import "./index.css";
 
@@ -13,11 +14,24 @@ const LoginForm = () => {
   const uPassword = "admin00";
 
   const handleSubmit = (e) => {
-    if(!validate(email, password)){
+    if (!validate(email, password)) {
       e.preventDefault();
     }
     else {
-      if(checkLogin(email, password)){
+      if (checkLogin(email, password)) {
+
+        const jwtToken = localStorage.getItem('jwtToken');
+
+        const axiosInstance = axios.create({
+          headers: {
+            'Authorization': `Bearer ${jwtToken}`
+          }
+        });
+
+        // example API call
+        axiosInstance.get('localhost:8080/login').then(response => {
+          console.log(response.data);
+        });
         navigate("/");
       }
       else {
@@ -27,7 +41,7 @@ const LoginForm = () => {
   }
 
   const checkLogin = (email, password) => {
-    if(email === uEmail && password === uPassword){
+    if (email === uEmail && password === uPassword) {
       return true;
     }
     else {
@@ -49,15 +63,15 @@ const LoginForm = () => {
     // console.log(typeof(email));
     var valid = true;
     var err = "";
-    if(!email.includes('@fpt.edu.vn')){
+    if (!email.includes('@fpt.edu.vn')) {
       err = "You should use @fpt.edu.vn email!";
       valid = false;
     }
-    if(password.length < 6){
+    if (password.length < 6) {
       err = err.concat("\n", "Password must be more than 5 characters!");
       valid = false;
     }
-    if(!valid){
+    if (!valid) {
       setMessage(err);
     }
     return valid;
@@ -74,11 +88,11 @@ const LoginForm = () => {
           <div id='message'></div>
           <div className="row">
             <label>Email</label>
-            <input type="email" name='email' placeholder="Enter your email" id="email"  required onChange={emailChange}/>
+            <input type="email" name='email' placeholder="Enter your email" id="email" required onChange={emailChange} />
           </div>
           <div className="row">
             <label>Password</label>
-            <input type="password" name='password' placeholder="Enter your password" id="password"  required onChange={passwordChange}/>
+            <input type="password" name='password' placeholder="Enter your password" id="password" required onChange={passwordChange} />
           </div>
           <div id="button" className="row">
             <button>Submit</button>

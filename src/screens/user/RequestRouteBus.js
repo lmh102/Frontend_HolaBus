@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../css/RequestRouteBus.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function RequestRouteBus() {
   const [message, setMessage] = useState("");
@@ -107,7 +109,10 @@ export default function RequestRouteBus() {
       setMessage(mess);
       e.preventDefault();
     }
-  };
+  }
+
+  const notify = () => toast("You are registered success!");
+
   return (
     <div className="container mt-5 mb-5">
       <div className="col-md-12 d-flex justify-content-center">
