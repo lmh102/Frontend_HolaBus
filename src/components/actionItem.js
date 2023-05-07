@@ -12,7 +12,7 @@ export default function ActionItem({src,ActionName}) {
   return (
     
     <>
-        <div className='container-fluid img-Action' style={{height : "80%", justifyContent : "center", alignItems : "center"}}>
+        <div className='container-fluid img-Action' style={{height : "80%", justifyContent : "center", alignItems : "center",display:"flex"}}>
             <Image src={src} alt= {ActionName} testId="image" css = {containerStyles}></Image>
         </div>
         <div style={{marginTop : 20,height : "20%",display : 'flex',alignItems : "flex-start",justifyContent:"center"}}>
