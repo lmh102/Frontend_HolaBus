@@ -1,40 +1,40 @@
-import React, {Component, useState} from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState} from "react";
+import {  useNavigate } from "react-router-dom";
 
 import "./index.css";
 
 const LoginForm = () => {
+  useEffect(() => {
+          localStorage.setItem("role",JSON.stringify(""));
+          localStorage.setItem("token",JSON.stringify(""));},[])
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
-  const uEmail = "aogshe163187@fpt.edu.vn";
-  const uPassword = "admin00";
-
   const handleSubmit = (e) => {
-    if(!validate(email, password)){
-      e.preventDefault();
-    }
-    else {
-      if(checkLogin(email, password)){
-        navigate("/");
-      }
-      else {
-        e.preventDefault();
-      }
-    }
+
+    const requestOptions = {
+        method: "POST",
+        body: JSON.stringify({"email": email,"password": password}),
+        headers: {'Content-Type': 'application/json'},
+        
+    };
+
+     fetch('https://cold-shrimps-report.loca.lt/api/public/login', requestOptions)
+        .then(response => response.json())
+        .then(data => {
+          localStorage.setItem("role",JSON.stringify(data.role));
+          localStorage.setItem("token",JSON.stringify(data.token));
+          if(data.role == "ROLE_ADMIN") navigate("/admin");
+          else navigate("/");
+        })
+        .catch(err => {
+      console.log(err);
+    });
+
   }
 
-  const checkLogin = (email, password) => {
-    if(email === uEmail && password === uPassword){
-      return true;
-    }
-    else {
-      setMessage("Email or password is invalid!");
-      return false;
-    }
-  }
   const emailChange = (e) => {
     const data = e.target.value;
     setEmail(data);
@@ -49,10 +49,10 @@ const LoginForm = () => {
     // console.log(typeof(email));
     var valid = true;
     var err = "";
-    if(!email.includes('@fpt.edu.vn')){
-      err = "You should use @fpt.edu.vn email!";
-      valid = false;
-    }
+    // if(!email.includes('@fpt.edu.vn')){
+    //   err = "You should use @fpt.edu.vn email!";
+    //   valid = false;
+    // }
     if(password.length < 6){
       err = err.concat("\n", "Password must be more than 5 characters!");
       valid = false;
@@ -69,7 +69,6 @@ const LoginForm = () => {
       <br></br>
       <div id="loginform">
         <FormHeader title="Login" />
-        <form onSubmit={handleSubmit}>
           <div className="text-center text-danger">{message}</div>
           <div id='message'></div>
           <div className="row">
@@ -81,9 +80,8 @@ const LoginForm = () => {
             <input type="password" name='password' placeholder="Enter your password" id="password"  required onChange={passwordChange}/>
           </div>
           <div id="button" className="row">
-            <button>Submit</button>
+            <button onClick={handleSubmit}>Submit</button>
           </div>
-        </form>
         <OtherMethods />
       </div>
     </div>
