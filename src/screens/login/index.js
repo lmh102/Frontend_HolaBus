@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React, { useEffect, useState} from "react";
 import {  useNavigate } from "react-router-dom";
+=======
+import React, { Component, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+>>>>>>> 2e90b2ae2e63974d0e086d0d9d114e7bcaf7b0b3
 
 import "./index.css";
 
@@ -13,6 +19,7 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
+<<<<<<< HEAD
 
     const requestOptions = {
         method: "POST",
@@ -35,6 +42,43 @@ const LoginForm = () => {
 
   }
 
+=======
+    if (!validate(email, password)) {
+      e.preventDefault();
+    }
+    else {
+      if (checkLogin(email, password)) {
+
+        const jwtToken = localStorage.getItem('jwtToken');
+
+        const axiosInstance = axios.create({
+          headers: {
+            'Authorization': `Bearer ${jwtToken}`
+          }
+        });
+
+        // example API call
+        axiosInstance.get('localhost:8080/login').then(response => {
+          console.log(response.data);
+        });
+        navigate("/");
+      }
+      else {
+        e.preventDefault();
+      }
+    }
+  }
+
+  const checkLogin = (email, password) => {
+    if (email === uEmail && password === uPassword) {
+      return true;
+    }
+    else {
+      setMessage("Email or password is invalid!");
+      return false;
+    }
+  }
+>>>>>>> 2e90b2ae2e63974d0e086d0d9d114e7bcaf7b0b3
   const emailChange = (e) => {
     const data = e.target.value;
     setEmail(data);
@@ -49,15 +93,23 @@ const LoginForm = () => {
     // console.log(typeof(email));
     var valid = true;
     var err = "";
+<<<<<<< HEAD
     // if(!email.includes('@fpt.edu.vn')){
     //   err = "You should use @fpt.edu.vn email!";
     //   valid = false;
     // }
     if(password.length < 6){
+=======
+    if (!email.includes('@fpt.edu.vn')) {
+      err = "You should use @fpt.edu.vn email!";
+      valid = false;
+    }
+    if (password.length < 6) {
+>>>>>>> 2e90b2ae2e63974d0e086d0d9d114e7bcaf7b0b3
       err = err.concat("\n", "Password must be more than 5 characters!");
       valid = false;
     }
-    if(!valid){
+    if (!valid) {
       setMessage(err);
     }
     return valid;
@@ -73,11 +125,11 @@ const LoginForm = () => {
           <div id='message'></div>
           <div className="row">
             <label>Email</label>
-            <input type="email" name='email' placeholder="Enter your email" id="email"  required onChange={emailChange}/>
+            <input type="email" name='email' placeholder="Enter your email" id="email" required onChange={emailChange} />
           </div>
           <div className="row">
             <label>Password</label>
-            <input type="password" name='password' placeholder="Enter your password" id="password"  required onChange={passwordChange}/>
+            <input type="password" name='password' placeholder="Enter your password" id="password" required onChange={passwordChange} />
           </div>
           <div id="button" className="row">
             <button onClick={handleSubmit}>Submit</button>
